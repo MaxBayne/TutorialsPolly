@@ -1,0 +1,21 @@
+﻿<Window x:Class="TutorialsPolly.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TutorialsPolly"
+        mc:Ignorable="d"
+        Title="Polly" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="BtnRetryOnce" Content="Retry Once" Click="BtnRetryOnce_Click" ToolTip="When Fail m Retry Once" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnRetryTimes" Content="Retry 3 Time" Click="BtnRetryTimes_Click" ToolTip="When Fail Retry Times until success or time out" HorizontalAlignment="Left" Margin="90,31,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnRetryForever" Content="Retry Forever" Click="BtnRetryForever_Click" ToolTip="When Fail Retry Forever until success" HorizontalAlignment="Left" Margin="177,31,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnWaitAndRetry" Content="Wait And Retry" Click="BtnWaitAndRetry_Click" ToolTip="When Fail Just Wait for time and start retry until success or time out" HorizontalAlignment="Left" Margin="275,31,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnWaitAndRetryForever" Content="Wait And Retry Forever" Click="BtnWaitAndRetryForever_Click" ToolTip="When Fail Just Wait for time and start retry until success forever" HorizontalAlignment="Left" Margin="377,31,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnFallback" Content="Fallback" Click="BtnFallback_Click" ToolTip="When Fail Return default value" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnCircuitBreaker" Content="CircuitBreaker" Click="BtnCircuitBreaker_Click" ToolTip="When Fail 3 Request it stop Calling Service again" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnWrappedRetryWithFallback" Content="Wrapped Fallback(Retry 3 Time)" Click="BtnWrappedRetryWithFallback_Click" ToolTip="When Fail start try 3 times after that apply fallback value" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnTimeout" Content="Timeout" Click="BtnTimeout_Click" ToolTip="when not success during 1 second then timeout and stop request" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="BtnCache" Content="Cache" Click="BtnCache_Click" ToolTip="it get data from caching" HorizontalAlignment="Left" Margin="10,238,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
